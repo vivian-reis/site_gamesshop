@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*Propriedade que inclui o preenchimento e a borda na largura e altura total de um elemento. Assim, ao ser colocado no reset, retira os preenchimentos pré-estabelecidos pelos navegadores.*/
+}
+body, input, textarea{
+    font-family: 'Roboto', sans-serif;
+}
+header, header h1, section h2, section h3, form button{
+    font-family: 'Bungee', sans-serif;
+    font-weight: normal;
+}
+header, footer{
+    padding: 16px 0;
+    background-color: #182c61;
+    color: #ecf0f1;
+}
+header nav li{
+    display: inline; /*Coloquei os links do menu lado a lado*/
+    margin-left: 16px; /*Para distanciar as opções do menu.*/
+    font-size: 18px;
+}
+header nav li a{
+    text-decoration: none;/*Remoção do underline dos links.*/
+    color: #ecf0f1;
+}
+.conteudo{
+    max-width: 1280px; /*Ideal para centralizar em telas grandes.*/
+    width: 100%;
+    margin: 0 auto; /*Para centralizar os textos do cabeçalho na tela. Sem essa configuração, os textos ficam no limite do lado esquerdo.*/
+}
+/*classe container: limitamos a largura em 1280px e o centralizamos e assim, o conteúdo do site ficará centralizado e ocupará até 1280px, desde que a tela tenha essa resolução de largura.*/
+header .conteudo, section .conteudo{
+    display: flex; /*Tag header: Colocamos o título e o menu lado a lado. Tag section: colocamos a foto da fachada ao lado do restante do conteúdo.*/
+    align-items: center; /*Centralizamos o conteúdo na vertical. A tag section foi estilizada abaixo, para não ter a centralização vertical.*/
+    justify-content: space-between; /*header: separamos o título do menu com um espaçamento igualitário. Não vi diferença para a tag section.*/
+}
+.logos img, .redes img{
+    height: 24px; /*Diminuímos a altura das imagens dos logos.*/
+}
+.logos li, .redes li{
+    display: inline; /*Colocamos os logos lado a lado.*/
+    margin-right: 8px; /*Espaçamento entre os logos*/
+}
+section .conteudo{
+    align-items: self-start; /*Retirou a centralização vertical*/
+}
+section{
+    padding: 24px 0; /*Espaçamento no topo e no inferior*/
+    color: #182c61;
+}
+section h2, h3{
+    margin-bottom: 16px;
+}
+section p{
+    margin-bottom: 8px;
+    text-align: justify;
+}
+.fachada {
+    margin-right:  32px; /*Margem à direita da imagem da fachada.*/
+}
+#contato .conteudo{
+    display: block; /*Foi necessário para manter as subseções do contato e lado a lado. Sem esta propriedade, o contato fica isolado no site. */
+}
+.metodos{
+    display: flex;/*Para colocar os métodos de contatos lado a lado (fale conosco, nos acompanhe e venha até nós).*/
+    justify-content: space-between; /*Para espaçar os tipos de contatos no site.*/
+}
+form input, form textarea, form button{
+    display: block; /*Propriedade responsável por colocar os campos do formulário um abaixo do outro.*/
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+form textarea{
+    resize: none; /*Para o usuário não manipular o tamanho deste campo.*/
+    height: 180px;
+}
+form button{
+    background-color: #182c61;
+    color: #ecf0f1;
+    border: none; /*Para retirar a borda*/
+    cursor: pointer; /*Para mudar o cursor quando o mouse passar por cima.*/
+    border-radius: 5px;
+}
+form button:hover{
+    background-color: #314e9e;
+}
+input:focus, textarea:focus{ /*Pseudo-seletor que serve para estilizar uma área selecionada (focus).*/
+    outline-color: #182c61; /*Aqui foi usado para mudar a cor do contorno do formulário, quando este for selecionado.*/
+}
+.redes li a{
+    text-decoration: none; /*Não identifiquei o underline na minha página, mas mantive esta propriedade.*/
+}
+footer {
+    text-align: center;
+}
